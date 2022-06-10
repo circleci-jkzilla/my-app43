@@ -4,8 +4,11 @@ orbs:
 jobs:
   build:
     executor: win/server-2022
+    shell: bash.exe python3
     steps:
       - run: Write-Host 'Hello, Windows'
+      - run: node -v
+      - run: nvm install 14.19.0
 workflows:
   my-workflow:
     jobs:
